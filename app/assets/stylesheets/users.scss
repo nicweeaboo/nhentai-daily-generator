@@ -135,8 +135,34 @@ footer {
 }
 
 .container {
-  width: 40%;
+  
   
   aspect-ratio: 100 / 29;
   margin: 0 auto;
+}
+
+@media screen and (max-width:650px) {
+  .cover {
+    width:300px;
+    height:500px;
+  }
+   h2 {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .btn {
+    border: 2px solid black;
+    background-color: none;
+    color: black;
+    padding: 6px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 3px;
+  }
+  .info {
+    border-color: #2196F3;
+    color: dodgerblue
+  }
 }
