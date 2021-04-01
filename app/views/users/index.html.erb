@@ -29,6 +29,6 @@
   <% end %>
   <%= form_with model: @user do |f| %>
     <%= f.email_field :email, placeholder:"Not Working Yet", required: true %>
-    <%= f.submit "Subscribe", class:"btn" %> 
+    <%= f.submit "Subscribe", class:"btn", disabled: true %> 
   <% end %>
 </div>
