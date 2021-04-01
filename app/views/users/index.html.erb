@@ -1,0 +1,34 @@
+<div style="text-align: center">
+  <h1>Daily doujinshi based on today's date</h1>
+  <h4><%= Time.now.strftime("%m/%d/%y") %> | <%=Time.now.strftime("%m%d%y")%></h4>
+  <% if @doujinshi.client.code == '404' %>
+    <h2>None hentai to show today.</h2>
+    
+    <%= image_tag('aqua-sad.png', size: 90)%>
+  <% else %>
+    <div class="container">
+      <h2><%= link_to @doujinshi.title, "https://nhentai.net/g/#{@doujinshi.id}", style: 'text-decoration: none;' %></h2>
+      <%= image_tag "/covers/#{@doujinshi.id}.#{@format}", width: 500, height: 650, style: 'border: 6px solid black; margin-bottom:15px'  %><br/>
+
+      <% @doujinshi.tags.each do |tag| %>
+        <a class="btn info"><%= tag.name.gsub!('<span class="name">','') %></a>
+      <% end %> <br/>
+
+    </div>
+    
+  <% end %>
+</div>
+<div class="subscribe">
+  <h2>Subscribe to receive the daily doujinshi!</h2>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= form_with model: @user do |f| %>
+    <%= f.email_field :email, placeholder:"Not Working Yet", required: true %>
+    <%= f.submit "Subscribe", class:"btn" %> 
+  <% end %>
+</div>

@@ -1,0 +1,6 @@
+<div class="unsubscribe">
+  <h1><%= link_to root_path do %>Unsubscribe from daily doujinshi<% end %></h1>
+
+  <p>Are you sure you want to unsubscribe <strong><%= @user.email %></strong> from all the next coming doujinshi?</p>
+  <%= button_to "Unsubscribe", { controller: "users", action: "destroy", id: @user.id }, method: :delete, class:"btn" %>
+</div>
