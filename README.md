@@ -4,3 +4,5 @@ Don't know for sure when I will do it but it's on my plans to add a subscription
 If the current date does not have any doujinshi to show, will show Aqua crying instead. 
 
 In terms of coding this app is simple and not well coded. 
+
+https://nhentai-daily-generator.herokuapp.com/
