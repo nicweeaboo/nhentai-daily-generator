@@ -1,24 +1,6 @@
-# README
+This web application shows the nhentai doujinshi based on the current date. It shows the name, tags, cover and the link to read.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Don't know for sure when I will do it but it's on my plans to add a subscription feature to receive directly in your email the doujinshi of the day.
+If the current date does not have any doujinshi to show, will show Aqua crying instead. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In terms of coding this app is simple and not well coded. 
