@@ -1,6 +1,6 @@
 <div style="text-align: center">
   <h1>Daily doujinshi based on today's date</h1>
-  <h4><%= Time.now.strftime("%m/%d/%y") %> | <%=Time.now.strftime("%m%d%y")%></h4>
+  <h4><%= Time.now.strftime("%d/%m/%y") %> | <%=Time.now.strftime("%d%m%y")%></h4>
   <% if @doujinshi.client.code == '404' %>
     <h2>None hentai to show today.</h2>
     
