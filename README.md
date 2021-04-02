@@ -5,4 +5,4 @@ If the current date does not have any doujinshi to show, will show Aqua crying i
 
 In terms of coding this app is simple and not well coded. 
 
-https://nhentai-daily-generator.herokuapp.com/
+https://dailydoujin.herokuapp.com/
