@@ -4,6 +4,12 @@ class UsersController < ApplicationController
     @doujinshi = Doujinshi.new(Time.now.strftime("%d%m%y").to_i)
     if @doujinshi.client.code == '200'
       @format = @doujinshi.cover.split('cover.').last
+      @tags = Array.new
+      @doujinshi.tags.each do |tag|
+        @tags << tag.name.gsub!('<span class="name">','')
+      end
+     
+       
       unless File.exists?("public/covers/#{@doujinshi.id}.#{@format}")
         open("public/covers/#{@doujinshi.id}.#{@format}", 'wb') {|file| file << open(@doujinshi.cover).read}
       end
@@ -35,7 +41,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Incoming cat knowledge cancelled! #{@user.email} has been successfully unsubscribed"
       redirect_to root_path
     else
-      flash.now[:alert] = "Sorry! #{@user.email} couldn't be unsubscribed. Please contact perfectplastic.undefined@gmail.com if the problem persists."
+      flash.now[:alert] = "Sorry! #{@user.email} couldn't be unsubscribed. Please contact *** if the problem persists."
     end
   end
 
