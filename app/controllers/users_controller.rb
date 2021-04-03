@@ -1,7 +1,7 @@
 require 'open-uri'
 class UsersController < ApplicationController
   def index
-    @doujinshi = Doujinshi.new(Time.now.strftime("%d%m%y").to_i)
+    @doujinshi = Doujinshi.new(898989)
     if @doujinshi.client.code == '200'
       @format = @doujinshi.cover.split('cover.').last
       @tags = Array.new

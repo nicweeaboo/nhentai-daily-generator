@@ -4,7 +4,7 @@
   <% if @doujinshi.client.code == '404' %>
     <h2>None hentai to show today.</h2>
     
-    <%= image_tag('aqua-sad.png', size: 90)%>
+    <%= image_tag('aqua-sad.png', size: 400)%>
   <% else %>
     <div class="container">
       <h2><%= link_to @doujinshi.title, "https://nhentai.net/g/#{@doujinshi.id}", style: 'text-decoration: none;' %></h2>
