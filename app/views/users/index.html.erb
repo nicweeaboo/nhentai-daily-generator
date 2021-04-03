@@ -8,7 +8,7 @@
   <% else %>
     <div class="container">
       <h2><%= link_to @doujinshi.title, "https://nhentai.net/g/#{@doujinshi.id}", style: 'text-decoration: none;' %></h2>
-      
+      <button id="btn" class="btn2 info">Show</button><br/>
       <%= image_tag "/covers/#{@doujinshi.id}.#{@format}", width: 500, height: 650, id:'thumb' , style: 'border: 6px solid black; margin-bottom:15px', class: 'blur'  %><br/>
 
       <% @tags.each do |tag| %>
